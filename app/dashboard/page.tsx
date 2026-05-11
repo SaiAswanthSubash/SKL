@@ -1,9 +1,19 @@
-export default function DashboardPage() {
+import Link from "next/link";
+
+export default function Dashboard() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <h1 className="text-5xl font-bold">
-        Welcome to SKL Dashboard
-      </h1>
-    </main>
+    <div style={{ padding: 40 }}>
+      <h1>Dashboard</h1>
+
+      <div style={{ marginTop: 20 }}>
+        <Link href="/dashboard/assignments">
+          <button>Assignments</button>
+        </Link>
+
+        <Link href="/dashboard/ai" style={{ marginLeft: 10 }}>
+          <button>AI Tutor</button>
+        </Link>
+      </div>
+    </div>
   );
 }
